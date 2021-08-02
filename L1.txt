@@ -1,5 +1,8 @@
 Intializing an empty git repositiory
 -- git init
+For first time using Configure The Git
+$ git config --global user.name "Your-Name"
+$ git config --global user.email "Your-email"
 
 Create a new file
 -- touch <filename>
@@ -10,8 +13,65 @@ Seeing the log what changes are yet to be made --> These changes are not in the 
 The records are yet to be saved in the history to save in thegit repository
 -- git add . add all the files in the history
 -- git status
+-- git commit -m "message"
 
-other way 
--- git commit -m "names.txt file added"
+If you want text in the file
+-- vi <filename>
+write the content at the end press Esc and :x that's it.
 
+Seeing the content of names.txt
+-- cat names.txt
 
+Without commiting the changes we made changes in the wrong file
+-- git add .
+-- git status
+-- git restore --staged names.txt
+outside the status
+
+See the history and all the commits
+-- git log
+
+removing the file 
+-- rm -rf names.txt
+-- git status
+-- git add .
+-- git commit -m "names.txt deleted"
+
+resetting the commit to last the previous one
+-- git reset 5f33d8d0f17bd37043ddae777c6e0b6303535a78
+-- git log
+-- git status 
+all these changes since the commit will be in the unstaged area i.e. git status
+
+stash (not want to commit and not want to loose it and storing it somewhere i.e. stash)
+-- git add . 
+-- git status
+-- git stash
+till recent commit the changes which were made will be stashed
+
+bring them back
+-- git stash pop
+
+Clear the stash area
+-- git stash clear
+
+(For this first add repository in our dashboard and copy that URL)
+adding URL to our local project
+-- git remote add origin https://github.com/tcchawla/Community-Classroom-Git.git
+
+URLS attached to this folder
+-- git remote -v
+
+Push the changes to the URL i.e. Ur git profile
+-- git push origin master
+
+Create new branch
+-- git branch <new_branch_name>
+
+And now we have to commit the changes on the new branch name
+-- git checkout <new_branch_name> (HEAD is changed to new_branch_name)
+
+now all the changes which are commited will be in the new branchName
+
+This branch is merged with the master branch
+-- git merge <new_branch_name>
