@@ -1,0 +1,17 @@
+Intializing an empty git repositiory
+-- git init
+
+Create a new file
+-- touch <filename>
+
+Seeing the log what changes are yet to be made --> These changes are not in the history 
+-- git status
+
+The records are yet to be saved in the history to save in thegit repository
+-- git add . add all the files in the history
+-- git status
+
+other way 
+-- git commit -m "names.txt file added"
+
+
